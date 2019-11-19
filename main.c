@@ -4,18 +4,16 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	int i = 0;
-	char str[4];
-	str[0] = 'a';
-	str[1] = 'b';
-	str[2] = 'c';
-	str[3] = '\0';
+	char src[]="The worst things to eat before you sleep";
+	char dst[100];
+	int i;
+	printf("원문 : %s\n", src);
+	for (i=0; src[i] != NULL; i++)
+		dst[i]=src[i];
+	dst[i]= NULL;
 	
-	printf("%s\n", str);
-	while(str[i] != '\0')  //while(str[i] ! =0;
-	{
-		printf("%c", str[i]);
-		i++;
-	}
+	//string(dst; src);
+	
+	printf("복사본 : %s", dst);
 	return 0;
 }
